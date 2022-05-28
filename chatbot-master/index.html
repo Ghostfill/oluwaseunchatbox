@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main__wrapper">
+      <div class="quick__questions">
+        <h3>Quick Questions</h3>
+        <ul class="" id="faq"></ul>
+        <div class="actions">
+          <button id="reset" onclick="reset()">Reset</button>
+        </div>
+      </div>
+      <main class="chat">
+        <header class="chat__header">
+          <div class="left flex">
+            <img
+              src="https://53.cdn.ekm.net/ekmps/shops/stormtrooper/images/r2-droid-[2]-165-p.jpg?v=1"
+              alt=""
+              class="logo"
+            />
+            <div class="flex flex-column">
+              <h3>Droid</h3>
+              <span id="loading"></span>
+            </div>
+          </div>
+
+          <div class="right flex">
+            <i class="fas fa-clock"></i>
+          </div>
+        </header>
+        <div id="chat__container"></div>
+        <footer class="chat__footer">
+          <form id="chat__form">
+            <input
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Say hello!"
+            />
+            <button type="submit">send</button>
+          </form>
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

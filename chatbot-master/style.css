@@ -1,0 +1,270 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* ::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2d1950;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(29, 152, 68, 0.959);
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(222, 130, 235, 0.911);
+  border-radius: 12px;
+}
+
+.flex {
+  display: flex;
+  gap: 4px;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.main__wrapper {
+  display: flex;
+  min-width: 70vw;
+  height: 70vh;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.main__wrapper > * {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.quick__questions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  border-radius: 12px;
+  padding: 1rem;
+}
+#faq {
+  list-style: none;
+  padding-left: 8px;
+}
+
+#faq li {
+  padding: 1rem;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#faq li:hover {
+  background: transparent;
+  border: solid 1px black;
+}
+
+.chat {
+  min-width: 350px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  position: relative;
+  border-radius: 12px;
+  flex: 3;
+  background-color: aliceblue;
+}
+
+.chat__header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat__header h3 {
+  margin: 0;
+}
+.chat__header .logo {
+  object-fit: contain;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin: 2px;
+  border: solid 0.7px rgba(0, 0, 0, 0.1);
+}
+
+#chat__container {
+  background-color: rgba(0, 0, 0, 0.08);
+  flex: 1;
+  margin-bottom: 8px;
+  padding: 30px 8px;
+  overflow-y: scroll;
+  border-radius: 4px;
+  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+  background-repeat: repeat;
+  background-position: center;
+  scroll-behavior: smooth;
+  border: solid 1px lightblue;
+}
+
+#chat__container .chats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  border-radius: 10px;
+  text-align: justify;
+  width: fit-content;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+
+#chat__container .chats.user {
+  margin-left: auto;
+  background-color: #dcf8c6;
+}
+.chats p {
+  margin: 0;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.chats h3 {
+  margin: 4px;
+}
+span.chats__timestamp {
+  font-size: xx-small;
+  margin-left: auto;
+}
+span.chats__name {
+  position: absolute;
+  top: -15px;
+  font-weight: 800;
+  font-size: xx-small;
+}
+.avatar {
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: solid 0.7px rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+}
+
+footer > form {
+  display: flex;
+  gap: 4px;
+}
+
+#message {
+  flex: 1;
+  outline: 0;
+  border-radius: 12px;
+  border: none;
+  padding: 8px;
+  height: 1.8rem;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+button {
+  border: none;
+  padding: 6px 8px;
+  border-radius: 12px;
+  min-width: 80px;
+  background: rgba(5, 5, 5, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+button:hover {
+  background-color: white;
+  color: #555;
+  border: solid 1px #555;
+}
+
+.symptom {
+  padding-left: 3px;
+  margin-top: 0;
+}
+
+.symptom > li {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+.symptom.p-measure > li {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.covid > li {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.symptom > li > span {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+  .main__wrapper {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 1rem;
+    min-height: 90vh;
+    height: auto;
+  }
+  .chat {
+    margin: 0 auto;
+    flex: 1;
+    width: 100%;
+  }
+  #faq {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex: 0;
+    max-width: 700px;
+  }
+}
+
+/* ======== MEDIA QUERIES (SMALL DEVICES) ======== */
+@media screen and (max-width: 600px) {
+  .chat {
+    min-height: 60vh;
+    min-width: auto;
+  }
+  #faq {
+    gap: 4px;
+  }
+  #faq li {
+    padding: 6px;
+  }
+}
